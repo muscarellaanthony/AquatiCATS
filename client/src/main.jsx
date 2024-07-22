@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
-import Success from './pages/Success';
 import About from './pages/About.jsx';
 import Media from './pages/Media.jsx';
 
@@ -25,9 +24,6 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
-      }, {
-        path: '/success',
-        element: <Success />
       }, {
         path: '/about',
         element: <About />

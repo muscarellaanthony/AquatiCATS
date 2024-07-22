@@ -19,6 +19,6 @@ const swimmerSchema = new Schema({
     },
 });
 
-const Swimmer = mongoose.model('Order', swimmerSchema);
+const Swimmer = mongoose.model('Swimmer', swimmerSchema);
 
 module.exports = Swimmer;

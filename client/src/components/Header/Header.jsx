@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import ShowLogin from "./ShowLogin";
-import Cart from '../Cart';
 
 function Header() {
     const linkClass = ({ isActive }) => isActive ? 'mb-5 text-indigo-950 pl-4 border-l-4 border-yellow-500' : 'mb-5 text-indigo-950 pl-4 hover:border-l-4 border-yellow-500'
@@ -45,7 +44,6 @@ function Header() {
 
                     <div className="flex h-1/3 justify-end mr-10">
                         <ShowLogin />
-                        <Cart />
                     </div>
 
                     <div className="flex h-1/2 lg:justify-end lg:mr-40 md:justify-center sm:justify-center">

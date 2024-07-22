@@ -8,7 +8,6 @@ import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
-import { StoreProvider } from './utils/GlobalState';
 import './tailwind.css';
 
 const httpLink = createHttpLink({
@@ -37,13 +36,11 @@ function App() {
     <div>
       <ApolloProvider client={client}>
         <div className='h-screen'>
-          <StoreProvider>
           <Header />
           <div className='overflow-scroll bg-yellow-950'>
             <Outlet />
           </div>
           <Footer />
-          </StoreProvider>
         </div>
       </ApolloProvider>
     </div>

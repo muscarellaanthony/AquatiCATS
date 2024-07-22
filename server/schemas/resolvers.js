@@ -1,24 +1,16 @@
-const { User, Product, Category, Swimmer } = require('../models');
+const { User, Swimmer } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
     user: async (parent, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
-          populate: 'category'
-        });
-
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
-
+        const user = await User.findById(context.user._id).populate({});
         return user;
       }
-
-      throw AuthenticationError;
     },
   },
+
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -26,11 +18,11 @@ const resolvers = {
 
       return { token, user };
     },
-    addSwimmer: async (parent, args, context)=> {
+    addSwimmer: async (parent, args, context) => {
       if (context.user) {
         const swimmer = new Swimmer(args);
 
-        await User.findByIdAndUpdate(context.user_id, {$push: {swimmers: swimmer}})
+        await User.findByIdAndUpdate(context.user_id, { $push: { swimmers: swimmer } })
 
         return swimmer;
       }
