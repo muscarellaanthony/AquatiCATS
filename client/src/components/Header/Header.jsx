@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import ShowLogin from "./ShowLogin";
+import Navbar from './navbar/Navbar';
 
 function Header() {
     const linkClass = ({ isActive }) => isActive ? 'mb-5 text-indigo-950 pl-4 border-l-4 border-yellow-500' : 'mb-5 text-indigo-950 pl-4 hover:border-l-4 border-yellow-500'
 
-    return (
-
+    return (<>
+        <Navbar/>
         <header className="h-1/2 bg-amber-50 flex lg:flex-row md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap xs:flex-col xs:flex-wrap">
 
             <div className="flex lg:flex-col md:flex-row sm:flex-row lg:justify-evenly content-center items-center lg:h-full md:h-1/4 sm:h-1/4 w-1/5 sm:justify-center">
@@ -16,17 +17,7 @@ function Header() {
                 </div>
 
 
-                <ul className="flex lg:flex-col items-start secondaryFontnav w-24 gap-5 md:flex-row">
-
-                    <li><NavLink to="/" className={linkClass}>HOME</NavLink></li>
-
-                    {/* <li><NavLink to="/shop" className={linkClass}>SHOP</NavLink></li> */}
-
-                    <li><NavLink to="/about" className={linkClass}>ABOUT</NavLink></li>
-
-                    <li><NavLink to="/media" className={linkClass}>MEDIA</NavLink></li>
-
-                </ul>
+              
 
             </div>
 
@@ -63,6 +54,7 @@ function Header() {
             </div>
 
         </header>
+        </>
     );
 }
 
