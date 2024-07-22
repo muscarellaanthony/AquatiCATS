@@ -1,4 +1,4 @@
-const { User, Product, Category, Order } = require('../models');
+const { User, Product, Category, Swimmer } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -25,6 +25,15 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addSwimmer: async (parent, args, context)=> {
+      if (context.user) {
+        const swimmer = new Swimmer(args);
+
+        await User.findByIdAndUpdate(context.user_id, {$push: {swimmers: swimmer}})
+
+        return swimmer;
+      }
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {

@@ -4,6 +4,14 @@ const typeDefs = `
     firstName: String
     lastName: String
     email: String
+    swimmers: [Swimmer]
+  }
+
+  type Swimmer {
+    _id: ID
+    firstName: String
+    lastName: String
+    birthdate: String
   }
 
   type Auth {
