@@ -1,6 +1,4 @@
 import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
-import Map from "../components/Map/map";
 
 const Home = () => {
   return (

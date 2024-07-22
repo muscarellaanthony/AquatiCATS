@@ -1,4 +1,3 @@
-import Cart from "../components/Cart";
 import Social from "../components/Media/Social";
 
 
