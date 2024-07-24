@@ -4,7 +4,7 @@ import ShowLogin from "./ShowLogin";
 import Navbar from './navbar/Navbar';
 
 function Header() {
-    const linkClass = ({ isActive }) => isActive ? 'mb-5 text-indigo-950 pl-4 border-l-4 border-yellow-500' : 'mb-5 text-indigo-950 pl-4 hover:border-l-4 border-yellow-500'
+    
 
     return (<>
         <Navbar/>
