@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import About from './pages/About.jsx';
 import Media from './pages/Media.jsx';
+import MeetSchedule from './pages/MeetSchedule.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
       }, {
         path: '/media',
         element: <Media />
+      }, {
+      path: '/Meets',
+      element: <MeetSchedule />
       }
     ]
   }

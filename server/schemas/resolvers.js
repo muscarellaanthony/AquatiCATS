@@ -1,4 +1,4 @@
-const { User, Swimmer } = require('../models');
+const { User, Swimmer, Meet } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -9,6 +9,9 @@ const resolvers = {
         return user;
       }
     },
+    meets: async () => {
+      return await Meet.find();
+    }
   },
 
   Mutation: {

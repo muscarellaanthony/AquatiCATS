@@ -14,6 +14,15 @@ const typeDefs = `
     birthdate: String
   }
 
+  type Meet{
+    _id: ID
+    date: String
+    location: String
+    name: String
+    deadline: String
+    invitational: Boolean
+  }
+
   type Auth {
     token: ID
     user: User
@@ -21,6 +30,7 @@ const typeDefs = `
 
   type Query{
     user: User
+    meets: [Meet]
   }
 
   type Mutation {
