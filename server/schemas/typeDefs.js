@@ -27,15 +27,6 @@ const typeDefs = `
     token: ID
     user: User
   }
-
-  type Meet{
-  _id: ID
-  date: String
-  location: String
-  name: String
-  deadline: String
-  invitational: Boolean
-  }
   
   type Query{
     user: User
