@@ -8,7 +8,7 @@ function Header() {
 
     return (<>
         <Navbar/>
-        <header className="h-1/2 bg-amber-50 flex lg:flex-row md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap xs:flex-col xs:flex-wrap">
+        {/* <header className="h-1/2 bg-amber-50 flex lg:flex-row md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap xs:flex-col xs:flex-wrap">
 
             <div className="flex lg:flex-col md:flex-row sm:flex-row lg:justify-evenly content-center items-center lg:h-full md:h-1/4 sm:h-1/4 w-1/5 sm:justify-center">
 
@@ -19,10 +19,10 @@ function Header() {
 
               
 
-            </div>
+            </div> */}
 
             {/* backgroud image div */}
-            <div
+            {/* <div
                 className="lg:w-4/5 lg:h-full md:h-3/4 sm:h-3/4 md:w-full"
                 style={{
                     backgroundImage: `url('/images/guitar-play.jpg')`,
@@ -53,7 +53,7 @@ function Header() {
                 </div>
             </div>
 
-        </header>
+        </header> */}
         </>
     );
 }

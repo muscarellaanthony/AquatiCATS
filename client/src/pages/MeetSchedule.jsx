@@ -5,6 +5,9 @@ import { GET_ALL_MEETS } from '../utils/queries';
 export default function MeetSchedule() {
     const { loading, error, data } = useQuery(GET_ALL_MEETS)
 
+    if (loading) return <p>Something Went Wrong</p>
+    if (error) return <p>Something Went Wrong</p>
+
     console.log(data)
     return (
         <>

@@ -37,7 +37,7 @@ function App() {
       <ApolloProvider client={client}>
         <div className='h-screen'>
           <Header />
-          <div className='overflow-scroll bg-yellow-950'>
+          <div className='overflow-scroll '>
             <Outlet />
           </div>
           <Footer />
