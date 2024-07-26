@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         path: '/media',
         element: <Media />
       }, {
-      path: '/Meets',
-      element: <MeetSchedule />
+        path: '/Meets',
+        element: <MeetSchedule />
       }
     ]
   }

@@ -22,7 +22,7 @@ export const QUERY_USER = gql`
 `;
 
 export const GET_ALL_MEETS = gql `
-  {
+  query getMeets {
     meets{
       _id
       date

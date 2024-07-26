@@ -24,13 +24,7 @@ const meetSchema = new Schema({
         type: Boolean,
         default: false,
         required: true
-    },
-    entries:[
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Entries'
-        }
-    ]
+    }
 });
 
 const Meet = mongoose.model('Meet', meetSchema);

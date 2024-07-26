@@ -17,7 +17,7 @@ const resolvers = {
       }
     },
     meets: async () => {
-
+      return await Meet.find();
     }
   },
 
