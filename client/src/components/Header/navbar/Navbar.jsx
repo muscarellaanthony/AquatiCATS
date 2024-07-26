@@ -1,9 +1,12 @@
 import './navbar.scss'
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion'; 
+import Sidebar from './Sidebar/Sidebar';
 const Navbar = () => {
+     const linkClass = ({ isActive }) => isActive ? 'mb-5 text-indigo-950 pl-4 border-l-4 border-yellow-500' : 'mb-5 text-indigo-950 pl-4 hover:border-l-4 border-yellow-500'
     return (
         <div className="navbar">
+            <Sidebar />
             <div className="wrapper">
                 <motion.span
                     initial={{ opacity: 0, scale: 0.5 }}

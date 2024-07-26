@@ -1,5 +1,6 @@
 const db = require('./connection');
 const { User, Meet, Swimmer} = require('../models');
+
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
