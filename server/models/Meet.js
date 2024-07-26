@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const meetSchema = new Schema({
     date: {
-        type: Date,
+        type: String,
         required: true
     },
     location: {
@@ -18,13 +18,19 @@ const meetSchema = new Schema({
         trim: true
     },
     deadline: {
-        type: Date
+        type: String
     },
     invitational: {
         type: Boolean,
         default: false,
         required: true
-    }
+    },
+    entries:[
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Entries'
+        }
+    ]
 });
 
 const Meet = mongoose.model('Meet', meetSchema);

@@ -20,3 +20,16 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const GET_ALL_MEETS = gql `
+  {
+    meets{
+      _id
+      date
+      location
+      name
+      deadline
+      invitational
+    }
+  }
+`

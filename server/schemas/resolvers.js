@@ -9,6 +9,7 @@ const resolvers = {
         return user;
       }
     },
+
     meet: async (parent, args, context) => {
       if (context.meet) {
         const meet = await Meet.findById(context.meet._id).populate({});
@@ -16,7 +17,7 @@ const resolvers = {
       }
     },
     meets: async () => {
-      return await Meet.find({});
+
     }
   },
 
