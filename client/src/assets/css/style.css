@@ -22,3 +22,8 @@
   align-self: end;
   color: black;
 }
+.more-mary {
+  position: unset;
+  float: right;
+  text-wrap: nowrap;
+}
