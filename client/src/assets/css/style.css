@@ -1,0 +1,24 @@
+.btn-mary {
+  background-image: linear-gradient(to right, #06b6d4, rgb(38, 50, 138));
+  z-index: inherit;
+}
+
+.btn-mary span {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 7px;
+}
+
+.page-content {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.p-unset {
+  position: unset;
+}
+.nr {
+  align-self: end;
+  color: black;
+}
