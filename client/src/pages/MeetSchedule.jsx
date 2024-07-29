@@ -1,4 +1,4 @@
-import MeetCard from '../components/MeetCard';
+import MeetCard from '../components/MeetCard/MeetCard';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_MEETS } from '../utils/queries';
 

@@ -1,0 +1,53 @@
+.card {
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin-bottom: 20px;
+
+    
+
+    .wrapping {
+        max-width: 1366px;
+        height: 100%;
+        width: 50%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 3px solid black;
+        background: linear-gradient(180deg, #0c0c1d, #111132);
+        border-radius: 20px;
+        gap: 30px;
+
+
+
+        h1 {
+            
+            color: white;
+            font-size: 1.5rem;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        h2 {
+            
+            color: white;
+            font-size: 1.3rem;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        p {
+            
+            color: white;
+            font-size: 1rem;
+            margin: 5px;
+            padding: 10px;
+        }
+    }
+}
