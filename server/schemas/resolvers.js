@@ -5,16 +5,16 @@ const resolvers = {
   Query: {
     user: async (parent, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({});
+        const user = await User.findById(context.user._id);
         return user;
       }
+
+      throw AuthenticationError;
     },
 
-    meet: async (parent, args, context) => {
-      if (context.meet) {
-        const meet = await Meet.findById(context.meet._id).populate({});
+    meet: async (parent, args) => {
+        const meet = await Meet.findOne({name: args.name});
         return meet;
-      }
     },
     meets: async () => {
       return await Meet.find();

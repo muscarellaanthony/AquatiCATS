@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+const Entries = require('./Entries')
 
 const meetSchema = new Schema({
     date: {
@@ -15,7 +16,8 @@ const meetSchema = new Schema({
     name: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        unique: true
     },
     deadline: {
         type: String
@@ -24,7 +26,8 @@ const meetSchema = new Schema({
         type: Boolean,
         default: false,
         required: true
-    }
+    },
+    entries: [Entries.schema]
 });
 
 const Meet = mongoose.model('Meet', meetSchema);
