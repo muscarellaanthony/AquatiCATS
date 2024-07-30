@@ -7,11 +7,18 @@ const entriesSchema = new Schema({
         type: String,
         required: true
     },
-    events: [
-        {
-            type: String
-        }
-    ]
+    event1: {
+        type: String,
+    },
+    event2: {
+        type: String,
+    },
+    event3: {
+        type: String,
+    },
+    event4: {
+        type: String,
+    },
 
 })
 

@@ -1,6 +1,7 @@
 import { Card } from "flowbite-react";
 import { Button } from "flowbite-react";
 import { useState } from "react";
+import Auth from '../utils/auth'
 const Home = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -10,6 +11,7 @@ const Home = () => {
 
   return (
     <>
+    <div>{Auth.loggedIn() ? (<div>Logged in</div>) : (<div>Not logged in</div>)}</div> {/* remove later*/}
       <div className="w-full mainFont md:w-1/4 flex justify-center items-center text-yellow-500 rounded text-3xl md:text-4xl my-10">
         Recent Updates
       </div>

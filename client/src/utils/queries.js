@@ -1,25 +1,14 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_USER = gql`
+export const GET_USER = gql`
   {
-    user {
+    user{
       firstName
-      lastName
-      orders {
-        _id
-        purchaseDate
-        products {
-          _id
-          name
-          description
-          price
-          quantity
-          image
-        }
+      swimmers {
+        firstName
       }
     }
-  }
-`;
+  }`
 
 export const GET_ALL_MEETS = gql `
   query getMeets {
@@ -33,3 +22,18 @@ export const GET_ALL_MEETS = gql `
     }
   }
 `
+
+export const GET_MEET = gql`
+  query getMeet($meetName: String){
+    meet(name: $meetName){
+      _id
+      date
+      location
+      name
+      deadline
+      invitational
+    }
+  }
+`
+
+

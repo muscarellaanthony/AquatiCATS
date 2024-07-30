@@ -14,7 +14,7 @@ export default function MeetSchedule() {
             {data && data.meets.length > 0 ? (
                 <div>
                     {data.meets.map((meet) => (
-                        <MeetCard key={meet.id} meet={meet} />
+                        <MeetCard key={meet._id} meet={meet} />
                     ))}
                 </div>
             ) : (

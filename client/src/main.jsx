@@ -11,6 +11,7 @@ import Media from "./pages/Media.jsx";
 import MeetSchedule from "./pages/MeetSchedule.jsx";
 import Join from "./pages/Join.jsx";
 import Contact from "./pages/Contact.jsx";
+import Entries from "./pages/Entries.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/Meets",
         element: <MeetSchedule />,
+      },
+      {
+        path: "/entries",
+        element: <Entries />,
       },
       {
         path: "/join",

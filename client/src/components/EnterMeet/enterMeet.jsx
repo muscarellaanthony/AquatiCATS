@@ -1,5 +1,5 @@
 "use client";
-import { SwimStyle } from "./meetDropdown/meetdropdown";
+// import { SwimStyle } from "./meetDropdown/meetdropdown";
 
 import { Button, Label, Modal, TextInput } from "flowbite-react";
 import { useRef, useState } from "react";
@@ -10,7 +10,7 @@ const EnterMeet = () => {
 
     return (
         <>
-            <Button onClick={() => setOpenModal(true)}>Enter</Button>
+            {/* <Button onClick={() => setOpenModal(true)}>Enter</Button>
             <Modal show={openModal} size="md" popup onClose={() => setOpenModal(false)} initialFocus={swimmerInputRef}>
                 <Modal.Header />
                 <Modal.Body>
@@ -35,7 +35,7 @@ const EnterMeet = () => {
                         </div>
                     </div>
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
         </>
     );
 }
