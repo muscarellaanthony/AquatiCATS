@@ -1,5 +1,6 @@
 import React from 'react'
 import './meetcard.scss'
+import EnterMeet from '../EnterMeet/enterMeet';
 
 export default function MeetCard({ meet }) {
   return (
@@ -10,6 +11,7 @@ export default function MeetCard({ meet }) {
           <h2>{meet.name}</h2>
           <p>Location: {meet.location}</p>
           <p>Entry Deadline: {meet.deadline}</p>
+          <EnterMeet />  
         </div>
       </div>
     </>
