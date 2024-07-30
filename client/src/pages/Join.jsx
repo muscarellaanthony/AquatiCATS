@@ -1,6 +1,9 @@
 // src/pages/Join.jsx
 import React, { useState } from "react";
 import { Button, Label } from "flowbite-react";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+import { ADD_USER } from "../utils/mutations";  
 
 const Join = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +12,7 @@ const Join = () => {
     email: "",
     password: "",
   });
-
+  const [addUser] = useMutation(ADD_USER);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -22,10 +25,18 @@ const Join = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(
-      "Omg you joined wow. Gj. If only Mary had the initiative to connect this to the back end."
-    );
+    const mutationResponse = await addUser({
+      variables: {
+        email: formData.email,
+        password: formData.password,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+      }
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
   };
+
 
   return (
     <div className="max-w-4xl mx-auto p-6">
